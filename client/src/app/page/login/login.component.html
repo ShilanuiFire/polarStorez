@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+      <div *ngIf="loggedIn">
+        <img [src]="user.photoUrl" width="50" alt="My Facebook Photo"  style="margin: 0px;">
+        <span class="text-white normalMargin font-family" style="padding: 3px;">{{user.firstName}} {{user.lastName}}</span>
+      </div>
+      
+      <button type="button" class="btn btn-outline-light" (click)="signInWithFB()" *ngIf="loggedIn===false">LOGIN FACEBOOK</button>
+      <button type="button" class="btn btn-outline-light" (click)="signOut()" *ngIf="loggedIn===true">LOGOUT FACEBOOK</button>
+    </div>
+
+    <div class="row">
+      <!-- <app-landingpage [user]='user' [loggedIn]='loggedIn'></app-landingpage> -->
+    </div>
+    
+
+    
+  </div>
+  
